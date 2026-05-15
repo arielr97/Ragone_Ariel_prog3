@@ -34,3 +34,25 @@ body{
   min-width: 100%;
   border: 3px solid yellow;
 }
+
+#cartas {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  max-width: 100%;
+}
+
+#cartas img{
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  #cartas{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  #cartas{
+    grid-template-columns: 1fr;
+  }
+}
