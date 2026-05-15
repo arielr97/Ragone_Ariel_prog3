@@ -28,10 +28,32 @@ class Carta{
         img.alt = this.code;
         img.style.width = "100%"
         img.style.cursor = "pointer";
+        img.addEventListener("click",() => { 
+            window.open(this.imagen);
+        })
         const p = document.createElement("p");
         p.textContent = `${this.suit} ${this.value}`;
+        const btnGuardar = document.createElement("button");
+        btnGuardar.textContent = "Guardar";
+        btnGuardar.classList.add("btn-guardar")
+        btnGuardar.addEventListener("click", () => {
+            Carta.guardarCarta(this);
+        })
         div.appendChild(img);
         div.appendChild(p);
+        div.appendChild(btnGuardar);
         return div;
+    }
+    static guardarCarta(carta){
+        if(localStorage.getItem("listaCartas") == null){
+            let listaCartas = [];
+            listaCartas.push(carta);
+            localStorage.setItem("listaCartas", JSON.stringify(listaCartas));
+        }else{
+            let listaActual = JSON.parse(localStorage.getItem("listaCartas"));
+            let listaFiltrada = listaActual.filter(item => item.code !== carta.code);
+            listaFiltrada.push(carta);
+            localStorage.setItem("listaCartas", JSON.stringify(listaFiltrada));
+        }
     }
 }
