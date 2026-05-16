@@ -1,8 +1,6 @@
 const contenedorCartas = document.getElementById("cartas");
 const btnAnterior = document.getElementById("anterior");
 const btnSiguiente = document.getElementById("siguiente");
-let listaPaginas = [];
-let pagina = 1;
 
 async function traerCartas() {
     contenedorCartas.innerHTML = "";
