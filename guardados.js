@@ -1,6 +1,6 @@
 const contenedorCartas = document.getElementById("cartas");
-const btnOrdSuit = document.getElementById("boton-suit");
-const btnOrdValue = document.getElementById("boton-value");
+const btnOrdValueDesc = document.getElementById("boton-value-desc");
+const btnOrdValueAsc = document.getElementById("boton-value-asc");
 
 let listaInstanciada = [];
 
@@ -25,14 +25,15 @@ function dibujarCartas(lista){
     }
 }
 
-function ordenarPorSuit(lista){
+function ordenarPorValueAsc(lista){
     lista.sort((a, b) => 
-        a.suit.localeCompare(b.suit)
+        a.value.localeCompare(b.value)
     );
     dibujarCartas(lista);
 }
-function ordenarPorValue(lista){
-    lista.sort((a, b) => 
+
+function ordenarPorValueDesc(lista){
+    lista.sort((b, a) => 
         a.value.localeCompare(b.value)
     );
     dibujarCartas(lista);
@@ -40,9 +41,9 @@ function ordenarPorValue(lista){
 
 
 dibujarCartas(listaInstanciada);
-btnOrdSuit.addEventListener("click", () => {
-    ordenarPorSuit(listaInstanciada);
+btnOrdValueDesc.addEventListener("click", () => {
+    ordenarPorValueDesc(listaInstanciada);
 })
-btnOrdValue.addEventListener("click", () => {
-    ordenarPorValue(listaInstanciada);
+btnOrdValueAsc.addEventListener("click", () => {
+    ordenarPorValueAsc(listaInstanciada);
 })

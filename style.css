@@ -4,8 +4,8 @@ body{
   align-items: center;
   text-align: center;
   background-color: beige;
-  border: 2px solid black;
   border-radius: 10px;
+  font-family: sans-serif;
 }
 
 .m-2 {
@@ -15,7 +15,7 @@ body{
   border: 5px solid black;
   border-radius: 15px;
   width: 100%;
-  max-height: 900px;
+  max-height: 1000px;
 }
 
 .m-2 header{
@@ -68,13 +68,14 @@ nav {
 
 #cartas img{
   border-radius: 10px;
+  background-color: green;
 }
 
 
 a{
   width: 100px;
-  height: 50px;
-  border: 2px solid black;
+  height: 40px;
+  border: 2px solid white;
   color: white;
   border-radius: 8px;
   text-align: center;
@@ -89,6 +90,29 @@ a{
 button{
   border-radius: 8px;
   background-color: rgb(140, 230, 140);
+  min-height: 30px;
+}
+
+header{
+  display: grid;
+  justify-items: center;
+  border: 5px solid black;
+}
+
+h1{
+  border: 5px solid black;
+  border-radius: 15px;
+  padding: 10px;
+  color:rgba(70, 7, 7, 0.856);
+  text-decoration:underline;
+  font-size: 30px;
+  font-weight: bold;
+  max-height: 80px;
+}
+
+h3{
+  font-size: 50px;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 900px) {

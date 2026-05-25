@@ -32,7 +32,7 @@ class Carta{
             window.open(this.imagen);
         })
         const p = document.createElement("p");
-        p.textContent = `${this.suit} ${this.value}`;
+        p.textContent = `${this.value} ${this.suit}`;
         const btnGuardar = document.createElement("button");
         btnGuardar.textContent = "Guardar";
         btnGuardar.classList.add("btn-guardar")
